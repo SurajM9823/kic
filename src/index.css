@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-gray-800 bg-white;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-gray-900 leading-tight;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium transition duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply text-white bg-blue-900 hover:bg-blue-800 focus:ring-blue-900;
+  }
+  
+  .btn-secondary {
+    @apply text-blue-900 bg-white border border-blue-900 hover:bg-blue-50 focus:ring-blue-800;
+  }
+  
+  .btn-accent {
+    @apply text-white bg-amber-500 hover:bg-amber-600 focus:ring-amber-500;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .section-title {
+    @apply mb-12 text-3xl font-bold text-center md:text-4xl;
+  }
+  
+  .nav-link {
+    @apply px-3 py-2 text-sm font-medium transition-colors rounded-md hover:bg-blue-50 hover:text-blue-900;
+  }
+  
+  .nav-link.active {
+    @apply text-blue-900 bg-blue-50;
+  }
+  
+  .card {
+    @apply overflow-hidden transition-all duration-300 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md;
+  }
+  
+  .input {
+    @apply w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-blue-900;
+  }
+  
+  .label {
+    @apply block mb-2 text-sm font-medium text-gray-700;
+  }
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header scroll effect */
+.header-scrolled {
+  @apply bg-white shadow-md;
+}

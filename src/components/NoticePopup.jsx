@@ -14,8 +14,8 @@ const NoticePopup = () => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-      <div className="relative bg-[#ffffff] rounded-lg shadow-2xl p-6 max-w-[595px] w-full max-h-[90vh] overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
+      <div className="relative bg-[#ffffff] rounded-lg shadow-2xl p-6 max-w-[calc(100vw-2rem)] sm:max-w-[595px] w-full max-h-[90vh] overflow-hidden">
         {/* Close Button */}
         <button
           onClick={() => setIsOpen(false)}

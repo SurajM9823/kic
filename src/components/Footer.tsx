@@ -5,7 +5,7 @@ import clogo from '../../clogo.png'; // Adjust the path based on your project st
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1c5292] text-[#ffffff] pt-16 pb-6">
+    <footer className="bg-gradient-to-b from-[#7eccbfa1] to-[#e6f0fa] text-[#374151] pt-16 pb-6">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Logo and Description */}
@@ -17,7 +17,7 @@ const Footer = () => {
                 className="size-16 md:size-32 lg:size-32 object-contain"
               />
             </div>
-            <p className="text-gray-200 mb-6">
+            <p className="text-[#374151] mb-6">
               Your trusted partner for international education and visa services. We help students achieve their global academic ambitions.
             </p>
             <div className="flex space-x-4">
@@ -25,7 +25,7 @@ const Footer = () => {
                 <a
                   key={social}
                   href="#"
-                  className="w-9 h-9 rounded-full bg-gray-600 flex items-center justify-center text-[#ffffff] hover:bg-[#4cbbe0] transition-colors"
+                  className="w-9 h-9 rounded-full bg-[#1c5292] flex items-center justify-center text-[#ffffff] hover:bg-[#4cbbe0] transition-colors"
                 >
                   <span className="sr-only">{social}</span>
                   <svg
@@ -47,7 +47,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-6 text-[#1c5292]">Quick Links</h3>
             <ul className="space-y-3">
               {[
                 { name: 'Home', to: 'home' },
@@ -65,7 +65,7 @@ const Footer = () => {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    className="text-gray-200 hover:text-[#4cbbe0] transition-colors cursor-pointer"
+                    className="text-[#374151] hover:text-[#4cbbe0] transition-colors cursor-pointer"
                   >
                     {link.name}
                   </Link>
@@ -76,7 +76,7 @@ const Footer = () => {
 
           {/* Our Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Our Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-[#1c5292]">Our Services</h3>
             <ul className="space-y-3">
               {[
                 'Education Counselling',
@@ -91,7 +91,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-gray-200 hover:text-[#4cbbe0] transition-colors"
+                    className="text-[#374151] hover:text-[#4cbbe0] transition-colors"
                   >
                     {service}
                   </a>
@@ -102,24 +102,24 @@ const Footer = () => {
 
           {/* Contact Us */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
-            <ul className="space-y-3 text-gray-200">
+            <h3 className="text-lg font-semibold mb-6 text-[#1c5292]">Contact Us</h3>
+            <ul className="space-y-3 text-[#374151]">
               <li>
-                <strong className="block text-[#ffffff]">Address:</strong>
+                <strong className="block text-[#1c5292]">Address:</strong>
                 123 Education Avenue, Suite 200
                 <br />
                 New York, NY 10001, USA
               </li>
               <li>
-                <strong className="block text-[#ffffff]">Phone:</strong>
+                <strong className="block text-[#1c5292]">Phone:</strong>
                 +1 (555) 123-4567
               </li>
               <li>
-                <strong className="block text-[#ffffff]">Email:</strong>
+                <strong className="block text-[#1c5292]">Email:</strong>
                 info@kiceducation.com
               </li>
               <li>
-                <strong className="block text-[#ffffff]">Hours:</strong>
+                <strong className="block text-[#1c5292]">Hours:</strong>
                 Mon-Fri: 9:00 AM - 6:00 PM
                 <br />
                 Sat: 10:00 AM - 2:00 PM
@@ -129,27 +129,27 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="pt-8 mt-8 border-t border-gray-600 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-300 text-sm mb-4 md:mb-0">
+        <div className="pt-8 mt-8 border-t border-[#4cbbe0]/20 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-[#374151] text-sm mb-4 md:mb-0">
             © {new Date().getFullYear()} KIC Education and Visa Services. All rights reserved.
           </p>
 
           <div className="flex space-x-6">
             <a
               href="#"
-              className="text-gray-300 hover:text-[#4cbbe0] text-sm"
+              className="text-[#374151] hover:text-[#4cbbe0] text-sm"
             >
               Privacy Policy
             </a>
             <a
               href="#"
-              className="text-gray-300 hover:text-[#4cbbe0] text-sm"
+              className="text-[#374151] hover:text-[#4cbbe0] text-sm"
             >
               Terms of Service
             </a>
             <a
               href="#"
-              className="text-gray-300 hover:text-[#4cbbe0] text-sm"
+              className="text-[#374151] hover:text-[#4cbbe0] text-sm"
             >
               Sitemap
             </a>

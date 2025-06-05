@@ -89,61 +89,40 @@ const Contact = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="bg-[#1c5292] text-[#ffffff] rounded-lg shadow-lg p-8">
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+          <div className="bg-gradient-to-b from-[#ffffff] to-[#e6f0fa] rounded-lg shadow-xl p-10 border border-[#4cbbe0]/20">
+            <h3 className="text-2xl font-bold mb-8 text-[#1c5292]">Contact Information</h3>
 
-            <ul className="space-y-6">
-              <li className="flex">
-                <MapPin className="mr-3 h-6 w-6 text-[#4cbbe0] flex-shrink-0" />
+            <ul className="space-y-4">
+              <li className="flex items-start p-3 rounded-md hover:bg-[#4cbbe0]/10 transition-colors">
+                <MapPin className="mr-3 h-6 w-6 text-[#1c5292] flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-medium mb-1">Office Address</h4>
-                  <p className="text-[#ffffff]">123 Education Avenue, Suite 200<br />New York, NY 10001, USA</p>
+                  <h4 className="font-bold text-[#1c5292] text-lg">Office Address</h4>
+                  <p className="text-[#374151] text-base">123 Education Avenue, Suite 200<br />New York, NY 10001, USA</p>
                 </div>
               </li>
-              <li className="flex">
-                <Phone className="mr-3 h-6 w-6 text-[#4cbbe0] flex-shrink-0" />
+              <li className="flex items-start p-3 rounded-md hover:bg-[#4cbbe0]/10 transition-colors">
+                <Phone className="mr-3 h-6 w-6 text-[#1c5292] flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-medium mb-1">Phone Number</h4>
-                  <p className="text-[#ffffff]">+1 (555) 123-4567</p>
+                  <h4 className="font-bold text-[#1c5292] text-lg">Phone Number</h4>
+                  <p className="text-[#374151] text-base">+1 (555) 123-4567</p>
                 </div>
               </li>
-              <li className="flex">
-                <Mail className="mr-3 h-6 w-6 text-[#4cbbe0] flex-shrink-0" />
+              <li className="flex items-start p-3 rounded-md hover:bg-[#4cbbe0]/10 transition-colors">
+                <Mail className="mr-3 h-6 w-6 text-[#1c5292] flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-medium mb-1">Email Address</h4>
-                  <p className="text-[#ffffff]">info@kiceducation.com</p>
+                  <h4 className="font-bold text-[#1c5292] text-lg">Email Address</h4>
+                  <p className="text-[#374151] text-base">info@kiceducation.com</p>
                 </div>
               </li>
-              <li className="flex">
-                <Clock className="mr-3 h-6 w-6 text-[#4cbbe0] flex-shrink-0" />
+              <li className="flex items-start p-3 rounded-md hover:bg-[#4cbbe0]/10 transition-colors">
+                <Clock className="mr-3 h-6 w-6 text-[#1c5292] flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-medium mb-1">Office Hours</h4>
-                  <p className="text-[#ffffff]">Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM - 2:00 PM</p>
+                  <h4 className="font-bold text-[#1c5292] text-lg">Office Hours</h4>
+                  <p className="text-[#374151] text-base">Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM - 2:00 PM</p>
                 </div>
               </li>
             </ul>
 
-            <div className="mt-8">
-              <h4 className="font-medium mb-3">Connect With Us</h4>
-              <div className="flex space-x-3">
-                {['facebook', 'twitter', 'instagram', 'linkedin'].map((social) => (
-                  <a
-                    key={social}
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-[#4cbbe0] flex items-center justify-center text-[#ffffff] hover:bg-[#ffffff] hover:text-[#1c5292] transition-colors"
-                  >
-                    <span className="sr-only">{social}</span>
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        fillRule="evenodd"
-                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                        clipRule="evenodd"
-                      ></path>
-                    </svg>
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>

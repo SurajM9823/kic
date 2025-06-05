@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, MessageCircle, X } from 'lucide-react';
+import { ArrowRight, MessageCircle, X, Phone } from 'lucide-react';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -143,6 +143,26 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* WhatsApp Button */}
+      <a
+        href="https://wa.me/+9779805996874"
+        className="fixed bottom-32 right-6 z-50 bg-[#4cbbe0] text-[#ffffff] p-3 rounded-full shadow-lg hover:bg-[#1c5292] transition-colors duration-300"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.33.27 2.62.75 3.83L2 22l6.32-.87c1.17.44 2.42.69 3.72.69 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.18c-1.16 0-2.3-.23-3.37-.67l-.24-.13-3.75.52.53-3.68-.13-.24c-.44-1.07-.67-2.21-.67-3.37 0-4.64 3.77-8.41 8.41-8.41s8.41 3.77 8.41 8.41-3.77 8.41-8.41 8.41zm4.74-6.47c-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.59.13-.18.26-.69.85-.85 1.03-.15.18-.31.22-.57.09-.26-.13-1.09-.41-2.08-1.31-.76-.69-1.28-1.55-1.43-1.81-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.46.13-.15.18-.26.26-.44.09-.18.04-.34-.02-.48-.06-.13-.59-1.41-.81-1.94-.22-.52-.44-.46-.59-.46-.15 0-.33 0-.5 0-.18 0-.46.09-.7.31-.24.22-.94.91-.94 2.22s.96 2.57 1.09 2.75c.13.18 1.91 3.05 4.65 4.03.66.23 1.17.37 1.57.47.66.17 1.26.14 1.73.09.53-.06 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24-.06-.11-.24-.18-.5-.31z"/>
+        </svg>
+      </a>
+
+      {/* Call Button */}
+      <a
+        href="tel:+9779805996874"
+        className="fixed bottom-20 right-6 z-50 bg-[#4cbbe0] text-[#ffffff] p-3 rounded-full shadow-lg hover:bg-[#1c5292] transition-colors duration-300"
+      >
+        <Phone size={20} />
+      </a>
+
       {/* Floating Chat Button */}
       <button
         onClick={() => setShowChat(!showChat)}
@@ -154,9 +174,9 @@ const Hero = () => {
       {/* Quick Inquiry Chat */}
       {showChat && (
         <div className="fixed bottom-20 right-6 z-50 w-80 bg-[#ffffff] rounded-lg shadow-2xl">
-          <div className="bg-[#1c5292] text-[#ffffff] p-3 rounded-t-lg flex justify-between items-center">
+          <div className="bg-gradient-to-b from-[#ffffff] to-[#e6f0fa] text-[#1c5292] p-3 rounded-t-lg flex justify-between items-center">
             <h3 className="text-base font-semibold">Quick Inquiry</h3>
-            <button onClick={() => setShowChat(false)} className="text-[#ffffff] hover:text-[#4cbbe0]">
+            <button onClick={() => setShowChat(false)} className="text-[#1c5292] hover:text-[#4cbbe0]">
               <X size={18} />
             </button>
           </div>

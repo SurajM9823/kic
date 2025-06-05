@@ -17,7 +17,7 @@ const Hero = () => {
       title: "Study in Japan 2025",
       subtitle: "Your Gateway to World-Class Education",
       description: "Japanese Language Classes (N5 & N4) • Multiple City Options • Limited Seats Available",
-      image: "https://images.pexels.com/photos/356807/pexels-photo-356807.jpeg",
+      image: import.meta.env.BASE_URL + 'images/Japan.png',
       cta: "Apply for Japan Intake"
     },
     {

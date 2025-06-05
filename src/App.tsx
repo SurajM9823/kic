@@ -9,6 +9,7 @@ import Testimonials from './components/Testimonials';
 import News from './components/News';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import NoticePopup from './components/NoticePopup';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
       </main>
       
       <Footer />
+      <NoticePopup />
     </div>
   );
 }

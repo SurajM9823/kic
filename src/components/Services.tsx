@@ -4,22 +4,15 @@ import {
   FileCheck, Globe, Building, HelpCircle
 } from 'lucide-react';
 
-interface ServiceCardProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  index: number;
-}
-
-const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, index }) => {
+const ServiceCard = ({ icon, title, description, index }) => {
   return (
-    <div className={`service-card fade-in relative flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-500`}>
-      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-gradient-to-br from-purple-900 via-indigo-700 to-blue-900 flex items-center justify-center text-white shadow-md">
+    <div className={`service-card fade-in relative flex flex-col items-center p-6 bg-[#ffffff] rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-500`}>
+      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-[#4cbbe0] flex items-center justify-center text-[#ffffff] shadow-md">
         {icon}
       </div>
-      <h3 className="text-lg font-bold mt-8 mb-2 text-gray-800 text-center">{title}</h3>
+      <h3 className="text-lg font-bold mt-8 mb-2 text-[#1c5292] text-center">{title}</h3>
       <p className="text-gray-600 text-sm text-center leading-relaxed">{description}</p>
-      <a href="#" className="inline-flex items-center mt-4 text-blue-600 font-semibold hover:text-amber-500 transition-colors duration-300">
+      <a href="#" className="inline-flex items-center mt-4 text-[#1c5292] font-semibold hover:text-[#4cbbe0] transition-colors duration-300">
         Learn more
         <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
@@ -42,7 +35,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-20 bg-[#ffffff]">
       <style>
         {`
           @keyframes fadeIn {
@@ -66,7 +59,7 @@ const Services = () => {
 
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Your Journey with Us</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#1c5292] mb-4">Your Journey with Us</h2>
           <p className="text-md md:text-lg text-gray-600">
             Follow our streamlined process to make your international education journey smooth and successful.
           </p>
@@ -87,7 +80,7 @@ const Services = () => {
         <div className="mt-16 text-center">
           <a
             href="#"
-            className="inline-flex items-center bg-gradient-to-br from-purple-900 via-indigo-700 to-blue-900 hover:from-blue-800 hover:to-amber-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            className="inline-flex items-center bg-[#4cbbe0] hover:bg-[#1c5292] text-[#ffffff] font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
           >
             Start Your Journey Today
           </a>

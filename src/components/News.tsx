@@ -1,17 +1,8 @@
 import React from 'react';
 import { Calendar, ArrowRight } from 'lucide-react';
 
-interface NewsItem {
-  id: number;
-  title: string;
-  excerpt: string;
-  date: string;
-  image: string;
-  category: string;
-}
-
-const News: React.FC = () => {
-  const newsItems: NewsItem[] = [
+const News = () => {
+  const newsItems = [
     {
       id: 1,
       title: "Changes to UK Student Visa Requirements in 2025",
@@ -39,16 +30,16 @@ const News: React.FC = () => {
   ];
 
   return (
-    <section className="section bg-white">
+    <section className="section bg-[#ffffff]">
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
           <div>
-            <h2 className="text-3xl font-bold mb-4">Latest News & Resources</h2>
+            <h2 className="text-3xl font-bold mb-4 text-[#1c5292]">Latest News & Resources</h2>
             <p className="text-gray-600 max-w-2xl">
               Stay updated with the latest education news, visa changes, and resources to help you make informed decisions.
             </p>
           </div>
-          <a href="#" className="inline-flex items-center text-blue-900 font-medium mt-4 md:mt-0 hover:text-amber-500">
+          <a href="#" className="inline-flex items-center text-[#1c5292] font-medium mt-4 md:mt-0 hover:text-[#4cbbe0]">
             View all articles
             <ArrowRight size={16} className="ml-2" />
           </a>
@@ -64,7 +55,7 @@ const News: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-blue-900 text-white text-xs font-medium rounded-full">
+                  <span className="px-3 py-1 bg-[#1c5292] text-[#ffffff] text-xs font-medium rounded-full">
                     {item.category}
                   </span>
                 </div>
@@ -76,13 +67,13 @@ const News: React.FC = () => {
                   <span>{item.date}</span>
                 </div>
                 
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-900">
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-[#4cbbe0]">
                   <a href="#">{item.title}</a>
                 </h3>
                 
                 <p className="text-gray-600 mb-4">{item.excerpt}</p>
                 
-                <a href="#" className="inline-flex items-center text-blue-900 font-medium hover:text-amber-500">
+                <a href="#" className="inline-flex items-center text-[#1c5292] font-medium hover:text-[#4cbbe0]">
                   Read more
                   <ArrowRight size={16} className="ml-2" />
                 </a>
@@ -90,8 +81,6 @@ const News: React.FC = () => {
             </article>
           ))}
         </div>
-        
-        
       </div>
     </section>
   );

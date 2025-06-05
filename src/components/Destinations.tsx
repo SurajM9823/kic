@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
 import { MapPin } from 'lucide-react';
 
-interface Destination {
-  id: string;
-  name: string;
-  image: string;
-  description: string;
-  universities: string[];
-  requirements: string[];
-}
-
-const Destinations: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>('usa');
+const Destinations = () => {
+  const [activeTab, setActiveTab] = useState('usa');
   
-  const destinations: Destination[] = [
+  const destinations = [
     {
       id: 'usa',
       name: 'United States',
@@ -67,10 +58,10 @@ const Destinations: React.FC = () => {
   const activeDestination = destinations.find(d => d.id === activeTab) || destinations[0];
 
   return (
-    <section className="section bg-white">
+    <section className="section bg-[#ffffff]">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="section-title">Study Destinations</h2>
+          <h2 className="section-title text-3xl font-bold text-[#1c5292] mb-4">Study Destinations</h2>
           <p className="text-lg text-gray-600">
             Explore top education destinations around the world and find the perfect place to pursue your academic goals.
           </p>
@@ -82,8 +73,8 @@ const Destinations: React.FC = () => {
               key={dest.id}
               className={`px-4 py-2 rounded-full mb-2 transition-colors ${
                 activeTab === dest.id 
-                  ? 'bg-blue-900 text-white' 
-                  : 'bg-gray-100 text-gray-700 hover:bg-blue-100'
+                  ? 'bg-[#1c5292] text-[#ffffff]' 
+                  : 'bg-gray-100 text-[#1c5292] hover:bg-[#4cbbe0] hover:text-[#ffffff]'
               }`}
               onClick={() => setActiveTab(dest.id)}
             >
@@ -92,7 +83,7 @@ const Destinations: React.FC = () => {
           ))}
         </div>
         
-        <div className="bg-white rounded-lg shadow-soft overflow-hidden">
+        <div className="bg-[#ffffff] rounded-lg shadow-soft overflow-hidden">
           <div className="grid md:grid-cols-2">
             <div 
               className="h-64 md:h-auto bg-cover bg-center" 
@@ -100,19 +91,19 @@ const Destinations: React.FC = () => {
             ></div>
             <div className="p-6 md:p-8">
               <div className="flex items-center mb-4">
-                <MapPin className="text-blue-900 mr-2" size={20} />
-                <h3 className="text-2xl font-semibold text-blue-900">{activeDestination.name}</h3>
+                <MapPin className="text-[#1c5292] mr-2" size={20} />
+                <h3 className="text-2xl font-semibold text-[#1c5292]">{activeDestination.name}</h3>
               </div>
               
               <p className="text-gray-600 mb-6">{activeDestination.description}</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-medium text-blue-900 mb-3">Top Universities</h4>
+                  <h4 className="font-medium text-[#1c5292] mb-3">Top Universities</h4>
                   <ul className="space-y-2">
                     {activeDestination.universities.map((uni, index) => (
                       <li key={index} className="flex items-start">
-                        <span className="inline-block w-2 h-2 mt-1.5 mr-2 rounded-full bg-amber-500"></span>
+                        <span className="inline-block w-2 h-2 mt-1.5 mr-2 rounded-full bg-[#4cbbe0]"></span>
                         <span>{uni}</span>
                       </li>
                     ))}
@@ -120,11 +111,11 @@ const Destinations: React.FC = () => {
                 </div>
                 
                 <div>
-                  <h4 className="font-medium text-blue-900 mb-3">Requirements</h4>
+                  <h4 className="font-medium text-[#1c5292] mb-3">Requirements</h4>
                   <ul className="space-y-2">
                     {activeDestination.requirements.map((req, index) => (
                       <li key={index} className="flex items-start">
-                        <span className="inline-block w-2 h-2 mt-1.5 mr-2 rounded-full bg-amber-500"></span>
+                        <span className="inline-block w-2 h-2 mt-1.5 mr-2 rounded-full bg-[#4cbbe0]"></span>
                         <span>{req}</span>
                       </li>
                     ))}
@@ -133,7 +124,7 @@ const Destinations: React.FC = () => {
               </div>
               
               <div className="mt-8">
-                <a href="#" className="btn btn-primary bg-gradient-to-br from-purple-900 via-indigo-700 to-blue-900">
+                <a href="#" className="btn btn-primary bg-[#4cbbe0] text-[#ffffff] hover:bg-[#1c5292] rounded-lg px-6 py-2 transition-colors duration-300">
                   Learn More About {activeDestination.name}
                 </a>
               </div>

@@ -1,18 +1,8 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
-interface Testimonial {
-  id: number;
-  name: string;
-  university: string;
-  country: string;
-  image: string;
-  quote: string;
-  rating: number;
-}
-
-const Testimonials: React.FC = () => {
-  const testimonials: Testimonial[] = [
+const Testimonials = () => {
+  const testimonials = [
     {
       id: 1,
       name: "Sarah Johnson",
@@ -75,25 +65,25 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <section className="section bg-gradient-to-br from-purple-900 via-indigo-700 to-blue-900 text-white relative overflow-hidden">
+    <section className="section bg-[#1c5292] text-[#ffffff] relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-amber-500 rounded-full"></div>
-        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-700 rounded-full"></div>
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#4cbbe0] rounded-full"></div>
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#4cbbe0] rounded-full"></div>
       </div>
       
       <div className="container relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="section-title text-white">Success Stories</h2>
-          <p className="text-lg text-blue-100">
+          <h2 className="section-title text-[#ffffff] text-3xl md:text-4xl font-bold mb-4">Success Stories</h2>
+          <p className="text-lg text-[#ffffff]">
             Hear from our students who successfully achieved their international education goals with our guidance.
           </p>
         </div>
         
         <div className="relative mx-auto max-w-4xl">
-          <div className="bg-white text-gray-900 rounded-lg shadow-lg p-8 md:p-10">
+          <div className="bg-[#ffffff] text-[#1c5292] rounded-lg shadow-lg p-8 md:p-10">
             <div className="flex flex-col md:flex-row gap-8">
               <div className="md:w-1/3">
-                <div className="relative w-40 h-40 mx-auto overflow-hidden rounded-full border-4 border-amber-500">
+                <div className="relative w-40 h-40 mx-auto overflow-hidden rounded-full border-4 border-[#4cbbe0]">
                   <img 
                     src={testimonials[currentIndex].image} 
                     alt={testimonials[currentIndex].name} 
@@ -105,18 +95,18 @@ const Testimonials: React.FC = () => {
               <div className="md:w-2/3">
                 <div className="flex mb-3">
                   {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                    <Star key={i} size={20} className="fill-amber-500 text-amber-500" />
+                    <Star key={i} size={20} className="fill-[#4cbbe0] text-[#4cbbe0]" />
                   ))}
                 </div>
                 
-                <blockquote className="text-lg italic mb-6">
+                <blockquote className="text-lg italic mb-6 text-gray-600">
                   "{testimonials[currentIndex].quote}"
                 </blockquote>
                 
                 <div className="flex flex-col">
-                  <span className="font-semibold text-lg text-blue-900">{testimonials[currentIndex].name}</span>
+                  <span className="font-semibold text-lg text-[#1c5292]">{testimonials[currentIndex].name}</span>
                   <span className="text-gray-600">{testimonials[currentIndex].university}</span>
-                  <span className="text-amber-500">{testimonials[currentIndex].country}</span>
+                  <span className="text-[#4cbbe0]">{testimonials[currentIndex].country}</span>
                 </div>
               </div>
             </div>
@@ -125,14 +115,14 @@ const Testimonials: React.FC = () => {
           <div className="flex justify-center mt-8 space-x-4">
             <button 
               onClick={prev}
-              className="p-2 rounded-full bg-white text-blue-900 hover:bg-amber-500 hover:text-white transition-colors"
+              className="p-2 rounded-full bg-[#ffffff] text-[#1c5292] hover:bg-[#4cbbe0] hover:text-[#ffffff] transition-colors"
               aria-label="Previous testimonial"
             >
               <ChevronLeft size={24} />
             </button>
             <button 
               onClick={next}
-              className="p-2 rounded-full bg-white text-blue-900 hover:bg-amber-500 hover:text-white transition-colors"
+              className="p-2 rounded-full bg-[#ffffff] text-[#1c5292] hover:bg-[#4cbbe0] hover:text-[#ffffff] transition-colors"
               aria-label="Next testimonial"
             >
               <ChevronRight size={24} />
@@ -145,7 +135,7 @@ const Testimonials: React.FC = () => {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-2.5 h-2.5 rounded-full mx-1 transition-colors ${
-                  index === currentIndex ? 'bg-amber-500' : 'bg-white bg-opacity-50'
+                  index === currentIndex ? 'bg-[#4cbbe0]' : 'bg-[#ffffff] bg-opacity-50'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               ></button>

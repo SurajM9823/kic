@@ -1,12 +1,12 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 
-const Contact: React.FC = () => {
+const Contact = () => {
   return (
-    <section className="section bg-gray-50">
+    <section className="section bg-[#ffffff]">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="section-title text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
+          <h2 className="section-title text-3xl font-bold text-[#1c5292] mb-4">Contact Us</h2>
           <p className="text-lg text-gray-600">
             Get in touch with our expert consultants to start your international education journey today.
           </p>
@@ -14,8 +14,8 @@ const Contact: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Contact Form */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800">Send Us a Message</h3>
+          <div className="bg-[#ffffff] rounded-lg shadow-lg p-8">
+            <h3 className="text-2xl font-semibold mb-6 text-[#1c5292]">Send Us a Message</h3>
 
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
                   <input
                     type="text"
                     id="fullName"
-                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4cbbe0]"
                     placeholder="Your full name"
                     required
                   />
@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
                   <input
                     type="email"
                     id="email"
-                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4cbbe0]"
                     placeholder="Your email address"
                     required
                   />
@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
                   <input
                     type="tel"
                     id="phone"
-                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4cbbe0]"
                     placeholder="Your phone number"
                   />
                 </div>
@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
                   <select
                     id="subject"
-                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4cbbe0]"
                     required
                   >
                     <option value="">Select a subject</option>
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
                 <textarea
                   id="message"
                   rows={5}
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4cbbe0]"
                   placeholder="How can we help you?"
                   required
                 ></textarea>
@@ -80,7 +80,7 @@ const Contact: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-br from-purple-900 via-indigo-700 to-blue-900 text-white font-semibold py-3 px-6 rounded-md hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center"
+                className="w-full bg-[#4cbbe0] text-[#ffffff] font-semibold py-3 px-6 rounded-md hover:bg-[#1c5292] transition-colors duration-300 flex items-center justify-center"
               >
                 <Send size={18} className="mr-2" />
                 Send Message
@@ -89,36 +89,36 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="bg-gradient-to-br from-purple-900 via-indigo-700 to-blue-900 text-white rounded-lg shadow-lg p-8">
+          <div className="bg-[#1c5292] text-[#ffffff] rounded-lg shadow-lg p-8">
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
 
             <ul className="space-y-6">
               <li className="flex">
-                <MapPin className="mr-3 h-6 w-6 text-amber-400 flex-shrink-0" />
+                <MapPin className="mr-3 h-6 w-6 text-[#4cbbe0] flex-shrink-0" />
                 <div>
                   <h4 className="font-medium mb-1">Office Address</h4>
-                  <p className="text-gray-200">123 Education Avenue, Suite 200<br />New York, NY 10001, USA</p>
+                  <p className="text-[#ffffff]">123 Education Avenue, Suite 200<br />New York, NY 10001, USA</p>
                 </div>
               </li>
               <li className="flex">
-                <Phone className="mr-3 h-6 w-6 text-amber-400 flex-shrink-0" />
+                <Phone className="mr-3 h-6 w-6 text-[#4cbbe0] flex-shrink-0" />
                 <div>
                   <h4 className="font-medium mb-1">Phone Number</h4>
-                  <p className="text-gray-200">+1 (555) 123-4567</p>
+                  <p className="text-[#ffffff]">+1 (555) 123-4567</p>
                 </div>
               </li>
               <li className="flex">
-                <Mail className="mr-3 h-6 w-6 text-amber-400 flex-shrink-0" />
+                <Mail className="mr-3 h-6 w-6 text-[#4cbbe0] flex-shrink-0" />
                 <div>
                   <h4 className="font-medium mb-1">Email Address</h4>
-                  <p className="text-gray-200">info@kiceducation.com</p>
+                  <p className="text-[#ffffff]">info@kiceducation.com</p>
                 </div>
               </li>
               <li className="flex">
-                <Clock className="mr-3 h-6 w-6 text-amber-400 flex-shrink-0" />
+                <Clock className="mr-3 h-6 w-6 text-[#4cbbe0] flex-shrink-0" />
                 <div>
                   <h4 className="font-medium mb-1">Office Hours</h4>
-                  <p className="text-gray-200">Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM - 2:00 PM</p>
+                  <p className="text-[#ffffff]">Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM - 2:00 PM</p>
                 </div>
               </li>
             </ul>
@@ -130,7 +130,7 @@ const Contact: React.FC = () => {
                   <a
                     key={social}
                     href="#"
-                    className="w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center text-white hover:bg-amber-500 transition-colors"
+                    className="w-10 h-10 rounded-full bg-[#4cbbe0] flex items-center justify-center text-[#ffffff] hover:bg-[#ffffff] hover:text-[#1c5292] transition-colors"
                   >
                     <span className="sr-only">{social}</span>
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

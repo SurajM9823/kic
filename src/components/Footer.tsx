@@ -3,9 +3,9 @@ import { Link } from 'react-scroll';
 import { ArrowUp } from 'lucide-react';
 import clogo from '../../clogo.png'; // Adjust the path based on your project structure
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-purple-900 via-indigo-700 to-blue-900 text-white pt-16 pb-6">
+    <footer className="bg-[#1c5292] text-[#ffffff] pt-16 pb-6">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Logo and Description */}
@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
                 className="size-16 md:size-32 lg:size-32 object-contain"
               />
             </div>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-200 mb-6">
               Your trusted partner for international education and visa services. We help students achieve their global academic ambitions.
             </p>
             <div className="flex space-x-4">
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                 <a
                   key={social}
                   href="#"
-                  className="w-9 h-9 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 hover:bg-blue-600 hover:text-white transition-colors"
+                  className="w-9 h-9 rounded-full bg-gray-600 flex items-center justify-center text-[#ffffff] hover:bg-[#4cbbe0] transition-colors"
                 >
                   <span className="sr-only">{social}</span>
                   <svg
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
                     smooth={true}
                     offset={-70}
                     duration={500}
-                    className="text-gray-300 hover:text-amber-400 transition-colors cursor-pointer"
+                    className="text-gray-200 hover:text-[#4cbbe0] transition-colors cursor-pointer"
                   >
                     {link.name}
                   </Link>
@@ -91,7 +91,7 @@ const Footer: React.FC = () => {
                 <li key={index}>
                   <a
                     href="#"
-                    className="text-gray-300 hover:text-amber-400 transition-colors"
+                    className="text-gray-200 hover:text-[#4cbbe0] transition-colors"
                   >
                     {service}
                   </a>
@@ -103,23 +103,23 @@ const Footer: React.FC = () => {
           {/* Contact Us */}
           <div>
             <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
-            <ul className="space-y-3 text-gray-300">
+            <ul className="space-y-3 text-gray-200">
               <li>
-                <strong className="block text-white">Address:</strong>
+                <strong className="block text-[#ffffff]">Address:</strong>
                 123 Education Avenue, Suite 200
                 <br />
                 New York, NY 10001, USA
               </li>
               <li>
-                <strong className="block text-white">Phone:</strong>
+                <strong className="block text-[#ffffff]">Phone:</strong>
                 +1 (555) 123-4567
               </li>
               <li>
-                <strong className="block text-white">Email:</strong>
+                <strong className="block text-[#ffffff]">Email:</strong>
                 info@kiceducation.com
               </li>
               <li>
-                <strong className="block text-white">Hours:</strong>
+                <strong className="block text-[#ffffff]">Hours:</strong>
                 Mon-Fri: 9:00 AM - 6:00 PM
                 <br />
                 Sat: 10:00 AM - 2:00 PM
@@ -129,27 +129,27 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="pt-8 mt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} KIC Education and Visa Services. All rights reserved.
+        <div className="pt-8 mt-8 border-t border-gray-600 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-300 text-sm mb-4 md:mb-0">
+            © {new Date().getFullYear()} KIC Education and Visa Services. All rights reserved.
           </p>
 
           <div className="flex space-x-6">
             <a
               href="#"
-              className="text-gray-400 hover:text-gray-200 text-sm"
+              className="text-gray-300 hover:text-[#4cbbe0] text-sm"
             >
               Privacy Policy
             </a>
             <a
               href="#"
-              className="text-gray-400 hover:text-gray-200 text-sm"
+              className="text-gray-300 hover:text-[#4cbbe0] text-sm"
             >
               Terms of Service
             </a>
             <a
               href="#"
-              className="text-gray-400 hover:text-gray-200 text-sm"
+              className="text-gray-300 hover:text-[#4cbbe0] text-sm"
             >
               Sitemap
             </a>
@@ -160,7 +160,7 @@ const Footer: React.FC = () => {
             spy={true}
             smooth={true}
             duration={500}
-            className="mt-6 md:mt-0 w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center text-white hover:bg-amber-500 transition-colors cursor-pointer"
+            className="mt-6 md:mt-0 w-10 h-10 bg-[#4cbbe0] rounded-full flex items-center justify-center text-[#ffffff] hover:bg-[#ffffff] hover:text-[#1c5292] transition-colors cursor-pointer"
           >
             <ArrowUp size={20} />
           </Link>

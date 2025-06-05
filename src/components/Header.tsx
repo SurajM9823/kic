@@ -1,20 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import clogo from '../../clogo.png'; // Adjust the path based on your project structure
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const mainLinks = [
     { name: 'Home', to: 'home' },
@@ -45,9 +35,7 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-transparent'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md"
     >
       <style>
         {`
@@ -69,9 +57,7 @@ const Header = () => {
             smooth={true}
             duration={500}
           >
-        <img src={clogo} alt="KIC Education Logo" className="size-16 md:size-32 lg:size-32 object-contain" />
-
-        
+            <img src={clogo} alt="KIC Education Logo" className="size-16 md:size-32 lg:size-32 object-contain" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -80,11 +66,7 @@ const Header = () => {
               <div key={index} className="relative group">
                 {link.submenu ? (
                   <button 
-                    className={`flex items-center px-4 py-2 transition-colors duration-200 rounded-lg ${
-                      scrolled 
-                        ? 'text-blue-900 hover:bg-blue-50' 
-                        : 'text-white hover:bg-white/90 hover:text-blue-900'
-                    }`}
+                    className="flex items-center px-4 py-2 transition-colors duration-200 rounded-lg text-[#1c5292] hover:bg-[#4cbbe0] hover:text-white"
                   >
                     {link.name}
                     <ChevronDown size={16} className="ml-1" />
@@ -93,14 +75,14 @@ const Header = () => {
                         <Link
                           key={subIndex}
                           to={subItem.to}
-                          className="block px-4 py-3 text-blue-900 hover:bg-blue-50 hover:text-blue-900 transition-colors duration-200"
+                          className="block px-4 py-3 text-[#1c5292] hover:bg-[#4cbbe0] hover:text-white transition-colors duration-200"
                           smooth={true}
                           duration={500}
                         >
                           <div className="flex items-center justify-between">
                             <span>{subItem.name}</span>
                             {subItem.highlight && (
-                              <span className="text-xs bg-amber-100 text-amber-600 px-2 py-1 rounded-full">
+                              <span className="text-xs bg-[#4cbbe0] text-white px-2 py-1 rounded-full">
                                 {subItem.highlight}
                               </span>
                             )}
@@ -112,11 +94,7 @@ const Header = () => {
                 ) : (
                   <Link
                     to={link.to}
-                    className={`px-4 py-2 transition-colors duration-200 rounded-lg ${
-                      scrolled 
-                        ? 'text-blue-900 hover:bg-blue-50' 
-                        : 'text-white hover:bg-white/90 hover:text-blue-900'
-                    }`}
+                    className="px-4 py-2 transition-colors duration-200 rounded-lg text-[#1c5292] hover:bg-[#4cbbe0] hover:text-white"
                     smooth={true}
                     duration={500}
                   >
@@ -127,7 +105,7 @@ const Header = () => {
             ))}
             <a 
               href="#"
-              className="ml-4 px-6 py-2 bg-gradient-to-br from-purple-900 via-indigo-700 to-blue-900 text-white rounded-lg hover:bg-amber-600 transition-colors duration-300"
+              className="ml-4 px-6 py-2 bg-[#4cbbe0] text-white rounded-lg hover:bg-[#1c5292] transition-colors duration-300"
             >
               Free Consultation
             </a>
@@ -135,7 +113,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`lg:hidden ${scrolled ? 'text-blue-900' : 'text-white'} focus:outline-none`}
+            className="lg:hidden text-[#1c5292] focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -152,7 +130,7 @@ const Header = () => {
                 <div key={index}>
                   {link.submenu ? (
                     <div className="space-y-2">
-                      <div className="font-medium text-blue-900 px-4 py-2">
+                      <div className="font-medium text-[#1c5292] px-4 py-2">
                         {link.name}
                       </div>
                       <div className="pl-4 space-y-2">
@@ -160,7 +138,7 @@ const Header = () => {
                           <Link
                             key={subIndex}
                             to={subItem.to}
-                            className="block px-4 py-2 text-blue-900 hover:bg-blue-50 hover:text-blue-900 rounded-lg transition-colors duration-200"
+                            className="block px-4 py-2 text-[#1c5292] hover:bg-[#4cbbe0] hover:text-white rounded-lg transition-colors duration-200"
                             smooth={true}
                             duration={500}
                             onClick={() => setIsOpen(false)}
@@ -168,7 +146,7 @@ const Header = () => {
                             <div className="flex items-center justify-between">
                               <span>{subItem.name}</span>
                               {subItem.highlight && (
-                                <span className="text-xs bg-amber-100 text-amber-600 px-2 py-1 rounded-full">
+                                <span className="text-xs bg-[#4cbbe0] text-white px-2 py-1 rounded-full">
                                   {subItem.highlight}
                                 </span>
                               )}
@@ -180,7 +158,7 @@ const Header = () => {
                   ) : (
                     <Link
                       to={link.to}
-                      className="block px-4 py-2 text-blue-900 hover:bg-blue-50 hover:text-blue-900 rounded-lg transition-colors duration-200"
+                      className="block px-4 py-2 text-[#1c5292] hover:bg-[#4cbbe0] hover:text-white rounded-lg transition-colors duration-200"
                       smooth={true}
                       duration={500}
                       onClick={() => setIsOpen(false)}
@@ -192,7 +170,7 @@ const Header = () => {
               ))}
               <a 
                 href="#"
-                className="block px-4 py-2 mt-4 bg-amber-500 text-white text-center rounded-lg hover:bg-amber-600 transition-colors duration-300"
+                className="block px-4 py-2 mt-4 bg-[#4cbbe0] text-white text-center rounded-lg hover:bg-[#1c5292] transition-colors duration-300"
               >
                 Free Consultation
               </a>

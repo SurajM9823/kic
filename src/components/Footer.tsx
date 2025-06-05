@@ -5,7 +5,7 @@ import clogo from '../../clogo.png'; // Adjust the path based on your project st
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-[#7eccbfa1] to-[#e6f0fa] text-[#374151] pt-16 pb-6">
+    <footer className="bg-gradient-to-b from-[#e6f0fa] to-[#e6f0fa] text-[#374151] pt-16 pb-6">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Logo and Description */}
